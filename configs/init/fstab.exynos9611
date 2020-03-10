@@ -11,7 +11,7 @@ odm		/odm		erofs		ro		wait,logical,first_stage_mount
 
 /dev/block/by-name/recovery     /recovery       emmc    defaults defaults
 /dev/block/by-name/boot         /boot           emmc    defaults defaults
-/dev/block/by-name/metadata	/metadata	ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic,sync	wait,first_stage_mount,formattable,check,fsverity
+/dev/block/by-name/metadata	/metadata	ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic,sync	wait,first_stage_mount,formattable,check,fsverity,metadata_csum
 /dev/block/by-name/vbmeta       /vbmeta         emmc    defaults first_stage_mount
 
 /dev/block/by-name/cache	/cache	ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic	wait,check
