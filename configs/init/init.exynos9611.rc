@@ -455,7 +455,6 @@ on boot
     chown system system /sys/class/sec/switch/uart_sel
 
 on late-fs
-    wait_for_prop hwservicemanager.ready true
     mount_all /vendor/etc/fstab.exynos9611 --late
 
 on fs
