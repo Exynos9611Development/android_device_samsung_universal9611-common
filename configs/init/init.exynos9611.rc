@@ -84,6 +84,9 @@ on init
     # VM
     write /proc/sys/vm/dirty_expire_centisecs 3000
 
+    # khugepaged tuning
+    write /sys/kernel/mm/transparent_hugepage/khugepaged/scan_sleep_millisecs 60000
+
     # for power hal
     chown system system /dev/cluster0_freq_min
     chown system system /dev/cluster0_freq_max
