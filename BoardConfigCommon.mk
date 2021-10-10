@@ -98,6 +98,9 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_universal9611
 # Display
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x2000U | 0x400000000LL
 
+## Graphics
+TARGET_USES_VULKAN := true
+
 ## Kernel
 BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_KERNEL_ADDITIONAL_FLAGS := HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
