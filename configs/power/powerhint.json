@@ -45,16 +45,6 @@
             "ResetOnInit": true
         },
         {
-            "Name": "KERNEL_APP_START_NOTIFY",
-            "Path": "/sys/kernel/mm/vmscan/am_app_launch",
-            "Values": [
-                "0",
-                "1"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
             "Name": "GPUPowerPolicy",
             "Path": "/sys/devices/platform/11500000.mali/power_policy",
             "Values": [
@@ -100,43 +90,9 @@
                 "0"
             ],
             "ResetOnInit": true
-        },
-        {
-            "Name": "PowerHALMainState",
-            "Path": "vendor.powerhal.state",
-            "Values": [
-                "CAMERA_STREAMING_MID",
-                "SUSTAINED_PERFORMANCE",
-                ""
-            ],
-            "Type": "Property"
-        },
-        {
-            "Name": "PowerHALAudioState",
-            "Path": "vendor.powerhal.audio",
-            "Values": [
-                "AUDIO_STREAMING_LOW_LATENCY",
-                ""
-            ],
-            "Type": "Property"
-        },
-        {
-            "Name": "PowerHALRenderingState",
-            "Path": "vendor.powerhal.rendering",
-            "Values": [
-                "EXPENSIVE_RENDERING",
-                ""
-            ],
-            "Type": "Property"
         }
     ],
     "Actions": [
-        {
-            "PowerHint": "SUSTAINED_PERFORMANCE",
-            "Node": "PowerHALMainState",
-            "Duration": 0,
-            "Value": "SUSTAINED_PERFORMANCE"
-        },
         {
             "PowerHint": "INTERACTION",
             "Node": "GPUMinFreq",
@@ -168,12 +124,6 @@
             "Value": "always_on"
         },
         {
-            "PowerHint": "LAUNCH",
-            "Node": "KERNEL_APP_START_NOTIFY",
-            "Duration": 5000,
-            "Value": "1"
-        },
-        {
             "PowerHint": "CAMERA_LAUNCH",
             "Node": "CPUMaxFreq",
             "Duration": 1000,
@@ -190,18 +140,6 @@
             "Node": "LPMDisable",
             "Duration": 1000,
             "Value": "1"
-        },
-        {
-            "PowerHint": "CAMERA_LAUNCH",
-            "Node": "KERNEL_APP_START_NOTIFY",
-            "Duration": 1000,
-            "Value": "1"
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_MID",
-            "Node": "PowerHALMainState",
-            "Duration": 0,
-            "Value": "CAMERA_STREAMING_MID"
         },
         {
             "PowerHint": "CAMERA_STREAMING_MID",
@@ -235,21 +173,9 @@
         },
         {
             "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
-            "Node": "PowerHALAudioState",
-            "Duration": 0,
-            "Value": "AUDIO_STREAMING_LOW_LATENCY"
-        },
-        {
-            "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
             "Node": "LPMDisable",
             "Duration": 0,
             "Value": "1"
-        },
-        {
-            "PowerHint": "EXPENSIVE_RENDERING",
-            "Node": "PowerHALRenderingState",
-            "Duration": 0,
-            "Value": "EXPENSIVE_RENDERING"
         },
         {
             "PowerHint": "INTERACTIVE",
