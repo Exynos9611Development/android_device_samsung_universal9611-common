@@ -16,6 +16,9 @@
 
 COMMON_PATH := device/samsung/universal9611-common
 
+# Inherit non-AB Device 
+$(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
+
 # 64BIT
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
