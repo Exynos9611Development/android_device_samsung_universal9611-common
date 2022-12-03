@@ -148,6 +148,7 @@ PRODUCT_COPY_FILES += \
 $(call soong_config_set,libinit,vendor_init_lib,//$(COMMON_PATH):init_universal9611)
 
 # Kernel
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 PRODUCT_ENABLE_UFFD_GC := true
 
