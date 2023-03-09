@@ -214,7 +214,6 @@ endif
 
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
-    NfcNci \
     Tag \
     init.nfc_sku.rc
 
