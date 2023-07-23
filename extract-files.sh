@@ -70,6 +70,9 @@ function blob_fixup() {
 	    "${PATCHELF}" --add-needed libshim_audioparams.so "${2}"
 	    sed -i 's|str_parms_get_str|str_parms_get_mod|g' "${2}"
 	    ;;
+        vendor/lib*/libskeymaster4device.so)
+            "${PATCHELF}" --replace-needed libcrypto.so libcrypto-v33.so "${2}"
+            ;;
     esac
 }
 
