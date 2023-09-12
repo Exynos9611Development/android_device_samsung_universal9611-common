@@ -108,6 +108,9 @@ PRODUCT_PACKAGES += \
     gralloc.exynos9611 \
     libion
 
+PRODUCT_PACKAGES += \
+    libGrallocWrapper
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
