@@ -66,8 +66,8 @@ function blob_fixup() {
         vendor/lib*/libsensorlistener.so)
             "${PATCHELF}" --add-needed libshim_sensorndkbridge.so "${2}"
             ;;
-    	vendor/lib64/libnfc_nci_nxp.so)
-	    sed -i 's|/etc/libnfc-nci\.conf|/vendor/etc/nfc\.conf|g' "${2}"
+        vendor/lib64/libwvhidl.so|vendor/lib64/mediadrm/libwvdrmengine.so)
+            "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-3.9.1.so" "libprotobuf-cpp-full-3.9.1.so" "${2}"
 	    ;;
         vendor/lib*/libskeymaster4device.so)
             "${PATCHELF}" --replace-needed libcrypto.so libcrypto-tm.so "${2}"
