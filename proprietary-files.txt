@@ -2,26 +2,9 @@
 
 ## Audio
 vendor/bin/main_abox
-vendor/lib/hw/audio.primary.exynos9611.so
-vendor/lib/libalsautils_sec.so
-vendor/lib/libaudio-ril.so
-vendor/lib/libaudioproxy.so
-vendor/lib/libaudio_soundtrigger.so
-vendor/lib/libfloatingfeature.so
-vendor/lib/libprofileparamstorage.so
-vendor/lib/librecordalive.so
-vendor/lib/libsamsungDiamondVoice.so
-vendor/lib/libSamsungPostProcessConvertor.so
 vendor/lib/libsecaudiocoreutils.so
-vendor/lib/libsecaudioinfo.so
 vendor/lib/libsecnativefeature.so
 vendor/lib/libspatializerparamstorage.so
-vendor/lib/lib_SamsungRec_07010.so
-vendor/lib/lib_soundaliveresampler.so
-vendor/lib/lib_SoundAlive_SRC384_ver320.so
-vendor/lib/vndk/libaudioroute.so:vendor/lib/libaudioroute.so
-vendor/lib/vndk/libtinyalsa.so:vendor/lib/libtinyalsa.so
-vendor/lib/soundfx/libaudioeffectoffload.so
 
 ## DRM
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine

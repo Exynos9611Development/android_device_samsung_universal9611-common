@@ -32,8 +32,11 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio-impl \
     audio.bluetooth.default \
+    audio.primary.exynos9611 \
     audio.r_submix.default \
     audio.usb.default \
+    libtinyalsa \
+    libaudioroute \
     libtinycompress
 
 PRODUCT_COPY_FILES += \
