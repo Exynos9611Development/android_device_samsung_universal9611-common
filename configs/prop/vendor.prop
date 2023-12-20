@@ -35,6 +35,7 @@ dalvik.vm.dex2oat64.enabled=true
 
 ## Graphics
 debug.sf.auto_latch_unsignaled=0
+debug.sf.disable_client_composition_cache=1
 debug.sf.latch_unsignaled=1
 debug.sf.predict_hwc_composition_strategy=0
 ro.hardware.egl=mali
