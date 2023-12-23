@@ -20,7 +20,7 @@ COMMON_PATH := device/samsung/universal9611-common
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
 # 64BIT
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/universal9611-common/universal9611-common-vendor.mk)
