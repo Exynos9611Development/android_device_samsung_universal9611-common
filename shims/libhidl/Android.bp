@@ -1,0 +1,13 @@
+cc_library_shared {
+   name: "libhidltransport_vendor",
+   stem: "libhidltransport",
+   shared_libs: ["libhidlbase"],
+   vendor: true,
+}
+
+cc_library_shared {
+   name: "libhwbinder_vendor",
+   stem: "libhwbinder",
+   shared_libs: ["libhidlbase"],
+   vendor: true,
+}
