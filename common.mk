@@ -330,6 +330,11 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     secril_config_svc
 
+# VNDK
+PRODUCT_PACKAGES += \
+    libnetutils.vendor:64 \
+    libsqlite.vendor:64
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.samsung-multihal
