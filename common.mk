@@ -221,6 +221,7 @@ PRODUCT_PACKAGES += \
     libOMX.Exynos.VP9.Encoder \
     libOMX.Exynos.WMV.Decoder
 
+<<<<<<< HEAD
 # NFC
 ifeq ($(TARGET_USES_NXP_NFC),true)
 PRODUCT_COPY_FILES += \
@@ -245,6 +246,15 @@ PRODUCT_PACKAGES += \
     NfcNci \
     Tag \
     init.nfc_sku.rc
+
+# OpenCL
+PRODUCT_PACKAGES += \
+    libOpenCL_symlink32 \
+    libOpenCL_symlink64 \
+    libOpenCL.1_symlink32 \
+    libOpenCL.1_symlink64 \
+    libOpenCL.1.1_symlink32 \
+    libOpenCL.1.1_symlink64
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
@@ -395,6 +405,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.samsung
     
+# Vulkan
+PRODUCT_PACKAGES += \
+    vulkan.universal9611_symlink32 \
+    vulkan.universal9611_symlink64
+
 # WiFi
 PRODUCT_PACKAGES += \
     WifiOverlay \
