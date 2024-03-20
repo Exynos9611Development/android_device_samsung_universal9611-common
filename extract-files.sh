@@ -67,8 +67,8 @@ function blob_fixup() {
 	    sed -i 's|/etc/libnfc-nci\.conf|/vendor/etc/nfc\.conf|g' "${2}"
 	    ;;
         vendor/lib*/libskeymaster4device.so)
-            "${PATCHELF}" --replace-needed libcrypto.so libcrypto-v33.so "${2}"
-            "${PATCHELF}" --add-needed libssl-v33.so "${2}"
+            "${PATCHELF}" --replace-needed libcrypto.so libcrypto-tm.so "${2}"
+            "${PATCHELF}" --add-needed libssl-tm.so "${2}"
             "${PATCHELF}" --add-needed libshim_crypto.so "${2}"
             ;;
         vendor/lib*/libsec-ril.so)
