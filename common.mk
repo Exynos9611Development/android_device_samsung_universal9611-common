@@ -19,9 +19,6 @@ COMMON_PATH := device/samsung/universal9611-common
 # 64BIT
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
-# Updatable APEX's
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/universal9611-common/universal9611-common-vendor.mk)
 
