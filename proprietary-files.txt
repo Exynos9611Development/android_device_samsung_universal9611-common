@@ -125,9 +125,6 @@ vendor/etc/wifi/mx140_wlan_t_sw.hcf
 vendor/etc/wifi/platform.txt
 vendor/etc/wifi/slsi_reg_database.bin
 
-## Prebuilt libwifi-hal.so
-vendor/lib64/libwifi-hal.so|dbef589d442244aac836ff016e0295636c118497
-
 ## GNSS
 vendor/bin/hw/gpsd
 vendor/bin/hw/vendor.samsung.hardware.gnss@2.0-service
