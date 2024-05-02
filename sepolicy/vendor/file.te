@@ -33,4 +33,4 @@ type sysfs_v4l, sysfs_type, r_fs_type, fs_type;
 type sysfs_mdnie_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_leds_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_cpuidle_writable, sysfs_type, rw_fs_type, fs_type;
-type proc_sound_devicetree, proc_type, r_fs_type, fs_type;
+type proc_sound_devicetree, proc_type, r_fs_type, fs_type, sysfs_type;
