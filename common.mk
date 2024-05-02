@@ -363,8 +363,7 @@ endif
 
 # Shims
 PRODUCT_PACKAGES += \
-    libshim_sensorndkbridge \
-    libshim_audioparams
+    libshim_sensorndkbridge
 
 # Soong Namespaces
 PRODUCT_SOONG_NAMESPACES += \
