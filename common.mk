@@ -25,9 +25,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/universal9611-common/universal9611-common-vendor.mk)
 
-# Debug utils
-$(call inherit-product, hardware/samsung-ext/interfaces/debug-tools/debug.mk)
-
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl:32 \
