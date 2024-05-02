@@ -359,11 +359,6 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 endif
 
-# Samsung Ext Flash
-PRODUCT_PACKAGES += \
-     vendor.samsung_ext.hardware.camera.flashlight-service \
-     FlashControl
-
 # Shims
 PRODUCT_PACKAGES += \
     libshim_sensorndkbridge \

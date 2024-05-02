@@ -167,12 +167,7 @@ VENDOR_SECURITY_PATCH := 2022-10-01
 BOARD_SEPOLICY_TEE_FLAVOR := teegris
 include device/samsung_slsi/sepolicy/sepolicy.mk
 
-BOARD_VENDOR_SEPOLICY_DIRS += \
-   $(COMMON_PATH)/sepolicy/vendor \
-   hardware/samsung-ext/interfaces/sepolicy/vendor
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-   $(COMMON_PATH)/sepolicy/private \
-   hardware/samsung-ext/interfaces/sepolicy/private
+BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
 
 # Vibrator
