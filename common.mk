@@ -239,11 +239,6 @@ PRODUCT_PACKAGES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay-lineage
-ifeq ($(TARGET_HAS_FOD),true)
-DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay-fod
-else
-DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay-nofod
-endif
 
 PRODUCT_ENFORCE_RRO_TARGETS += framework-res SystemUI SettingsProvider CarrierConfig
 
