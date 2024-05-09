@@ -83,9 +83,6 @@ BOARD_DTBO_CFG := $(COMMON_PATH)/configs/kernel/$(TARGET_DEVICE).cfg
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_CUSTOM_DTBIMG_MK := $(COMMON_PATH)/mkdtbimg.mk
 
-# Fingerprint
-TARGET_SEC_FP_REQUEST_FORCE_CALIBRATE := true
-
 ## Camera
 SOONG_CONFIG_NAMESPACES += samsungCameraVars
 SOONG_CONFIG_samsungCameraVars += extra_ids
