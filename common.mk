@@ -51,16 +51,11 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml
 
 # Biometric Fingerprint
-ifeq ($(TARGET_HAS_FOD),true)
-PRODUCT_PACKAGES += \
-     android.hardware.biometrics.fingerprint@2.3-service-samsung.universal9611
-else
 PRODUCT_PACKAGES += \
      android.hardware.biometrics.fingerprint-service.samsung
 
 PRODUCT_COPY_FILES += \
      $(COMMON_PATH)/configs/keylayout/uinput-sec-fp.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-sec-fp.kl
-endif
 
 # Bluetooth
 PRODUCT_PACKAGES += \
