@@ -348,14 +348,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.samsung-multihal
 
-ifeq ($(TARGET_HAS_FOD),true)
-PRODUCT_PACKAGES += \
-    sensors.samsung
-
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
-endif
-
 # Shims
 PRODUCT_PACKAGES += \
     libshim_sensorndkbridge
