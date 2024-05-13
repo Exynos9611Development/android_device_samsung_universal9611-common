@@ -104,8 +104,8 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-l
 TARGET_KEYMASTER_VARIANT := samsung
 
 ## Manifest
-DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
-DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/vintf/manifest.xml
+DEVICE_MATRIX_FILE := $(COMMON_PATH)/configs/vintf/compatibility_matrix.xml
 
 ## NFC SKU
 ifeq ($(filter true, $(TARGET_USES_NXP_NFC) $(TARGET_USES_SLSI_NFC)),true)
