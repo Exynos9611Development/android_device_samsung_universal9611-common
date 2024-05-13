@@ -69,13 +69,6 @@ ro.vendor.vibrator_hal.click_duration=50
 ro.vendor.vibrator_hal.tick_duration=45
 ro.vendor.vibrator_hal.texture_tick_duration=30
 
-## CSC
-ro.csc.country_code=Romania
-ro.csc.countryiso_code=RO
-ro.csc.omcnw_code=ROM
-ro.csc.omcnw_code2=ROM
-ro.csc.sales_code=ROM
-
 ## SoC
 ro.soc.manufacturer=Samsung
 ro.soc.model=Exynos 9611
