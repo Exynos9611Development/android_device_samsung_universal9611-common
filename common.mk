@@ -88,14 +88,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SamsungDAP
 
-ifeq ($(TARGET_HAS_FOD),true)
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/audio/dax-default_ti.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml
-else
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/audio/dax-default_rc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml
-endif
-
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl:64 \
