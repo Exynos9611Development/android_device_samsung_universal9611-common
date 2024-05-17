@@ -1,6 +1,16 @@
 {
     "Nodes": [
         {
+            "Name": "GPUMinFreq",
+            "Path": "/dev/gpu_freq_min",
+            "Values": [
+                "572000",
+                "260000",
+            ],
+            "HoldFd": true,
+            "ResetOnInit": true
+        },
+        {
             "Name": "CPUMaxFreq",
             "Path": "/sys/power/cpufreq_max_limit",
             "Values": [
@@ -264,6 +274,18 @@
             "Node": "DoubleTapToWakeEnable",
             "Duration": 0,
             "Value": "aot_enable,1"
+        },
+        {
+            "PowerHint": "EXPENSIVE_RENDERING",
+            "Node": "GPUMinFreq",
+            "Duration": 0,
+            "Value": "572000"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "GPUMinFreq",
+            "Duration": 5000,
+            "Value": "572000"
         }
     ]
 }
