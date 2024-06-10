@@ -34,6 +34,7 @@ debug.hwui.target_cpu_time_percent=30
 dalvik.vm.dex2oat64.enabled=true
 
 ## Graphics
+debug.hwui.skia_atrace_enabled=false
 debug.sf.auto_latch_unsignaled=0
 debug.sf.disable_client_composition_cache=0
 debug.sf.enable_transaction_tracing=false
