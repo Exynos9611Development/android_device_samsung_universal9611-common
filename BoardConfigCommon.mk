@@ -100,6 +100,9 @@ TARGET_USES_VULKAN := true
 BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_KERNEL_ADDITIONAL_FLAGS := HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 
+## Verified Boot
+BOARD_AVB_ENABLE := false
+
 # ART
 ART_BUILD_TARGET_NDEBUG := true
 ART_BUILD_TARGET_DEBUG := false
