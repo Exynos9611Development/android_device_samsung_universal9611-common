@@ -1,1 +1,4 @@
 allow system_server proc_wakelocks:file r_file_perms;
+
+# Allow system_server to read Fast Charging status
+allow system_server sysfs_battery:file { getattr open read };
