@@ -17,7 +17,11 @@
 MKDTBOIMG    := $(HOST_OUT_EXECUTABLES)/mkdtboimg$(HOST_EXECUTABLE_SUFFIX)
 KERNEL_OUT := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ
 DTB_DIR    := $(KERNEL_OUT)/arch/$(KERNEL_ARCH)/boot/dts/exynos
-DTB_CFG    := $(COMMON_PATH)/configs/kernel/$(TARGET_SOC).cfg
+ifneq ($(filter m30s, $(TARGET_DEVICE)),)
+DTB_CFG    := $(COMMON_PATH)/configs/kernel/exynos9610.cfg
+else
+DTB_CFG    := $(COMMON_PATH)/configs/kernel/exynos9611.cfg
+endif
 
 INSTALLED_DTBIMAGE_TARGET := $(PRODUCT_OUT)/dtb.img
 
