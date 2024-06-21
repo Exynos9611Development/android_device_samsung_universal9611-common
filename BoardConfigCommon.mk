@@ -122,6 +122,8 @@ TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_TOGGLE := true
 TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_DEADLINE := false
 
 ## Manifest
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    vendor/lineage/config/device_framework_matrix.xml
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/vintf/manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/configs/vintf/compatibility_matrix.xml
 
