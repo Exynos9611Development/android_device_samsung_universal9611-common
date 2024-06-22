@@ -16,7 +16,7 @@
 COMMON_PATH := device/samsung/universal9611-common
 
 ## Include path
-TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
+$(call soong_config_set,samsungVars,target_specific_header_path,$(COMMON_PATH)/include)
 
 ## Inherit proprietary vendor configuartion
 include vendor/samsung/universal9611-common/BoardConfigVendor.mk
