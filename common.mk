@@ -136,13 +136,6 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.samsung \
     android.hardware.health-service.samsung-recovery
 
-# HIDL
-PRODUCT_PACKAGES += \
-   libhidltransport \
-   libhidltransport.vendor \
-   libhwbinder \
-   libhwbinder.vendor
-
 # Incremental FS
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.incremental.enable=yes
