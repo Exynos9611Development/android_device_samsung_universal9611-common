@@ -63,8 +63,9 @@ ro.hardware.chipname=exynos9611
 ro.build.PDA=A515FXXU5GVK6
 
 ## RIL
+ro.carrier=unknown
+ro.radio.noril=no
 vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
-vendor.sec.rild.libpath2=/vendor/lib64/libsec-ril-dsds.so
 ro.telephony.default_network=10,10
 ro.config.vc_call_vol_steps=10
 
