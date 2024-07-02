@@ -92,7 +92,7 @@ PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-im
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.5-service_64.samsung \
+    android.hardware.camera.provider-service_32.samsung \
     libsensorndkbridge \
     libhwjpeg
 
