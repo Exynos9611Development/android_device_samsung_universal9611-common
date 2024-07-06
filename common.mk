@@ -53,8 +53,7 @@ PRODUCT_COPY_FILES += \
 # Biometric Fingerprint
 ifeq ($(TARGET_HAS_FOD),true)
 PRODUCT_PACKAGES += \
-     android.hardware.biometrics.fingerprint@2.3-service-samsung.universal9611 \
-     UdfpsHandler9611
+     android.hardware.biometrics.fingerprint@2.3-service-samsung.universal9611
 else
 PRODUCT_PACKAGES += \
      android.hardware.biometrics.fingerprint-service.samsung
