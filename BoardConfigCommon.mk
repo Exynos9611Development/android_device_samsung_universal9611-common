@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020-2021 The LineageOS Project
+# Copyright (C) 2020-2024 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -81,7 +81,7 @@ BOARD_DTBO_CFG := $(COMMON_PATH)/configs/kernel/$(TARGET_DEVICE).cfg
 
 ## DTB
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-BOARD_CUSTOM_DTBIMG_MK := $(COMMON_PATH)/mkdtbimg.mk
+BOARD_DTB_CFG := $(COMMON_PATH)/configs/kernel/exynos9611.cfg
 
 ## Camera
 SOONG_CONFIG_NAMESPACES += samsungCameraVars
