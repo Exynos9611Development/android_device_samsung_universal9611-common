@@ -42,34 +42,41 @@ vendor/etc/mixer_usb_white.xml
 
 ## RIL
 vendor/bin/cbd
-vendor/lib/libsecril-client.so
+vendor/bin/cass
+vendor/etc/init/init.baseband.rc
+vendor/etc/init/cass.rc
+vendor/etc/init/init.vendor.rilcommon.rc
+vendor/etc/plmn_delta_attaio.bin
+vendor/etc/plmn_delta_hktw.bin
+vendor/etc/plmn_delta_usagsm.bin
+vendor/etc/plmn_delta.bin
+vendor/etc/plmn_se13.bin
 vendor/lib64/libfloatingfeature.so
 vendor/lib64/libsecnativefeature.so
-vendor/lib64/libsecril-client.so
-vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
-vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
-vendor/lib64/vendor.samsung.hardware.radio@2.0.so
-vendor/lib64/vendor.samsung.hardware.radio@2.1.so
+vendor/lib64/libengmode_client.so
+vendor/lib64/libvkmanager_vendor.so
 
-## RIL - From A515FXXU5EUG5
-vendor/bin/hw/rild|2982c9628c9f8f82ff579cdb1273baed47112dfc
-vendor/etc/plmn_delta_attaio.bin|751a1c7105f1c03fc196689c2a71e2c69aa14e1f
-vendor/etc/plmn_delta_hktw.bin|97a5a4747e8c32d463d8f26254257309b8a03a63
-vendor/etc/plmn_delta_usagsm.bin|9a25ec9e9da16ed2f8a9db07f037fe08283b24e5
-vendor/etc/plmn_delta.bin|6a826cb6a8a1d460403ab2ebccf4f0d7be546ce6
-vendor/etc/plmn_se13.bin|5239d1c74574102bcaba13ecb094be67e65704b8
-vendor/etc/init/init.baseband.rc|db12805a9f48672283094d8538f2fab69bef025f
-vendor/etc/init/init.vendor.onebinary.rc|b3fab964774039b1f2f6eabf821556919b26369f
-vendor/etc/init/init.vendor.rilchip.rc|83d57882dfaefaaa21c5dd636bafd655dfaf0b10
-vendor/etc/init/init.vendor.rilcommon.rc|5a669667301c678eb825abb41531ae1e19897886
-vendor/lib64/libengmode_client.so|f4d4ec4f2c29cf3ce54a74e3c28936ab5c41ab39
-vendor/lib64/libreference-ril.so|88d198da07ea1a67245beb1da4c48da9d627ef32
-vendor/lib64/libril.so|ae21d2979f849435331f7e5c224dd1ce61615eba
-vendor/lib64/librilutils.so|c929ab09b9335b404cb6aab859d5cc20a986d2ca
-vendor/lib64/libsec-ril-dsds.so|3c7b8e57793a89ff141b08a1160482fad0940609
-vendor/lib64/libsec-ril.so|1a131c93609c7e48f835cde1fecc4a9a403c697e
-vendor/lib64/libvkmanager_vendor.so|cdfb5546e476058b1eb3695b6c21a181f9bb44bf
-vendor/lib64/libsemnativecarrierfeature.so|ca44453cf7cca968606b56936be7de0d214d74be
+## RIL - from a14 - A145FXXS5BXA1
+-vendor/bin/hw/rild|006374bbdd818b1d6ee83617ddabbf4073974e0e
+vendor/etc/init/vendor.samsung.rilchip.slsi.rc|95aa52333814b340e5064eae3a9bd5cb8a96a3ff
+-vendor/etc/vintf/manifest/vendor.samsung.hardware.radio.exclude.slsi.xml|c3f8ea3f6228f2d572081b0c0ae29a251de4350b
+-vendor/etc/vintf/manifest/vendor.samsung.hardware.radio_manifest_2_33.xml|e9cdde9d05c5cce32f76bbb164437f43b3288157
+-vendor/etc/vintf/manifest/vendor.samsung.hardware.sehradio_manifest_2_33.xml|ebbe359a9b2d78cb88debe79d9183c039afb7c01
+-vendor/lib/libsecril-client.so;MODULE=libsecril-client.exynos9611|96bf65152d221ac528b763f625bb93e56899033d
+-vendor/lib/libsemnativecarrierfeature.so|a5c3b35d8b515ea478e6fcbe7483bfbab95b36fd
+-vendor/lib64/libsecril-client.so;MODULE=libsecril-client.exynos9611|26efd845750d4ad91e3a5c5dd7d95d40e8ef52a8
+-vendor/lib64/libSemDataProps.so|86a95ebb35d80cc1ec2bdd0f80601787f1ef88ba
+-vendor/lib64/libSemTelephonyProps.so|659466f18732155cbf308c14924135f2e65a3f48
+-vendor/lib64/libprotobuf-cpp-full-21.7.so|92fd1090bd6aa2d00d4ae4e721f48a6e601b67d5
+-vendor/lib64/libril_sem.so|0a685aa2e67d05f180edea84d55f4b4c56da4748
+-vendor/lib64/libsec-ril.so|d11c5da2fa5619fa526a4d9a3d92c26678a4c671|cb8c5220ddaa2b6b2705dfa83d8f0740ea38106a
+-vendor/lib64/libsemnativecarrierfeature.so|91a9c92f3b2094479090c269771a704c58ed30c6
+-vendor/lib64/vendor.samsung.hardware.radio-V1-ndk.so|669709f8ff7d3435592c518ad0ba087f42b65606
+-vendor/lib64/vendor.samsung.hardware.radio.bridge-V1-ndk.so|a324420e0ecab5f08c606f28eb233b68792072c7
+-vendor/lib64/vendor.samsung.hardware.radio.channel-V1-ndk.so|e44c75cf85ac8f286cce8877544e2df0403579e2
+-vendor/lib64/vendor.samsung.hardware.radio.data-V1-ndk.so|9d4b2dddfe22574fabc94231fc47d6a7ec99fcd1
+-vendor/lib64/vendor.samsung.hardware.radio.messaging-V1-ndk.so|23184bdd3a38b864a17cabcd771ee7347da31495
+-vendor/lib64/vendor.samsung.hardware.radio.sim-V1-ndk.so|f89b327cf692da0aba6d4304592b52766b736e24
 
 ## EGL - From P610XXS4FXA1
 vendor/lib/egl/libGLES_mali.so;SYMLINK=vendor/lib/libOpenCL.so;SYMLINK=vendor/lib/libOpenCL.so.1;SYMLINK=vendor/lib/libOpenCL.so.1.1;SYMLINK=vendor/lib/hw/vulkan.universal9611.so|7514fe04ecdd4018064640456006245120a0e12a
@@ -128,3 +135,9 @@ vendor/etc/nfc/sec_s3nrn82_rfreg.bin
 
 # NFC
 vendor/etc/init/init.nfc.samsung.rc
+
+## VaultKeeper
+-vendor/bin/vaultkeeperd
+vendor/etc/init/vaultkeeper_common.rc
+-vendor/lib64/libstork_shared.so
+-vendor/lib64/libvkservice.so
