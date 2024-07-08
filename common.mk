@@ -86,10 +86,17 @@ PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
 PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
 
 # Camera
+ifeq ($(TARGET_HAS_UDFPS),true)
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.5-service_64.samsung \
+    android.hardware.camera.provider-service.samsung \
     libsensorndkbridge \
     libhwjpeg
+else
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider-service_32.samsung \
+    libsensorndkbridge \
+    libhwjpeg
+endif
 
 # Apeture
 TARGET_BUILD_APERTURE_CAMERA := true
