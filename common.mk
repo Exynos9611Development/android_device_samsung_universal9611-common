@@ -37,15 +37,13 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@7.1-impl:32 \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio-impl \
-    android.hardware.soundtrigger@2.3-impl \
     audio.bluetooth.default \
     audio.primary.exynos9611 \
     audio.r_submix.default \
     audio.usb.default \
     libtinyalsa \
     libaudioroute \
-    libtinycompress \
-    sound_trigger.primary.dummy
+    libtinycompress
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration_7_0.xml \
