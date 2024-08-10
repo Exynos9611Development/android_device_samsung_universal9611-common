@@ -2,12 +2,12 @@
     "Nodes": [
         {
             "Name": "GPUMinFreq",
-            "Path": "/dev/gpu_freq_min",
+            "Path": "/sys/kernel/gpu/gpu_min_clock",
             "Values": [
-                "572000",
-                "260000",
+                "764000",
+                "455000",
+                "260000"
             ],
-            "HoldFd": true,
             "ResetOnInit": true
         },
         {
@@ -136,6 +136,12 @@
             "Node": "PowerHALMainState",
             "Duration": 0,
             "Value": "SUSTAINED_PERFORMANCE"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "GPUMinFreq",
+            "Duration": 0,
+            "Value": "455000"
         },
         {
             "PowerHint": "LAUNCH",
@@ -279,13 +285,7 @@
             "PowerHint": "EXPENSIVE_RENDERING",
             "Node": "GPUMinFreq",
             "Duration": 0,
-            "Value": "572000"
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "GPUMinFreq",
-            "Duration": 5000,
-            "Value": "572000"
+            "Value": "764000"
         }
     ]
 }
