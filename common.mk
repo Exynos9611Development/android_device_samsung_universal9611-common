@@ -69,6 +69,29 @@ PRODUCT_PACKAGES += \
 # Apeture
 TARGET_BUILD_APERTURE_CAMERA := true
 
+# Codec2
+PRODUCT_PACKAGES += \
+    samsung.hardware.media.c2@1.2-service \
+
+PRODUCT_PACKAGES += \
+    libExynosC2H264Dec \
+    libExynosC2H264Enc \
+    libExynosC2HevcDec \
+    libExynosC2HevcEnc \
+    libExynosC2Vp8Dec \
+    libExynosC2Vp8Enc
+
+PRODUCT_PACKAGES += \
+    codec2.vendor.base.policy \
+    codec2.vendor.ext.policy
+
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
+    $(COMMON_PATH)/configs/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
+    $(COMMON_PATH)/configs/media/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
+    $(COMMON_PATH)/configs/media/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
+    $(COMMON_PATH)/configs/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
+
 # ConfigStore
 PRODUCT_PACKAGES += \
     disable_configstore
@@ -163,30 +186,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
-# Media
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml
-
 # Memtrack
 PRODUCT_PACKAGES += \
     android.hardware.memtrack-service.samsung-mali
-
-# OMX
-PRODUCT_PACKAGES += \
-    libstagefrighthw \
-    libExynosOMX_Core \
-    libExynosOMX_Resourcemanager \
-    libOMX.Exynos.AVC.Decoder \
-    libOMX.Exynos.AVC.Encoder \
-    libOMX.Exynos.HEVC.Decoder \
-    libOMX.Exynos.HEVC.Encoder \
-    libOMX.Exynos.MPEG4.Decoder \
-    libOMX.Exynos.MPEG4.Encoder \
-    libOMX.Exynos.VP8.Decoder \
-    libOMX.Exynos.VP8.Encoder \
-    libOMX.Exynos.VP9.Decoder \
-    libOMX.Exynos.VP9.Encoder \
-    libOMX.Exynos.WMV.Decoder
 
 # NFC
 PRODUCT_PACKAGES += \
