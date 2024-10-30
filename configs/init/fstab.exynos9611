@@ -3,21 +3,24 @@
 # The filesystem that contains the filesystem checker binary (typically /system) cannot
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
+system		/system		erofs		ro		            wait,logical,first_stage_mount
 system		/system		ext4		ro,barrier=1		wait,logical,first_stage_mount
-vendor		/vendor		erofs		ro			wait,logical,first_stage_mount
+vendor		/vendor		ext4		ro,barrier=1	    wait,logical,first_stage_mount
+vendor		/vendor		erofs		ro			        wait,logical,first_stage_mount
 product		/product	ext4		ro,errors=panic		wait,logical,first_stage_mount
-odm		/odm		erofs		ro		wait,logical,first_stage_mount
+product		/product	erofs		ro	wait,logical,first_stage_mount
+odm	    	/odm		erofs		ro		            wait,logical,first_stage_mount
 
 /dev/block/by-name/recovery     /recovery       emmc    defaults defaults
 /dev/block/by-name/boot         /boot           emmc    defaults defaults
-/dev/block/by-name/metadata	/metadata	ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic,sync	wait,first_stage_mount,formattable,check
+/dev/block/by-name/metadata   	/metadata	    ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic,sync	wait,first_stage_mount,formattable,check
 
 /dev/block/by-name/cache	/cache	ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic	wait,check
 /dev/block/by-name/userdata	/data	f2fs	noatime,nosuid,nodev,discard,usrquota,grpquota,fsync_mode=nobarrier,reserve_root=32768,resgid=5678	latemount,wait,check,quota,reservedsize=128M,checkpoint=fs,fileencryption=aes-256-xts
-/dev/block/by-name/userdata     /data   ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic         latemount,wait,check,quota,reservedsize=128M,fileencryption=aes-256-xts
-/dev/block/by-name/efs	        /mnt/vendor/efs	        ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic	wait,check
+/dev/block/by-name/userdata /data   ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic         latemount,wait,check,quota,reservedsize=128M,fileencryption=aes-256-xts
+/dev/block/by-name/efs      /mnt/vendor/efs	   ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic	wait,check
 /dev/block/by-name/cpefs	/mnt/vendor/cpefs	ext4	noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic	wait,check,nofail
-/dev/block/by-name/misc	/misc	emmc	defaults	defaults,first_stage_mount
+/dev/block/by-name/misc	    /misc	emmc	defaults	defaults,first_stage_mount
 
 /devices/platform/13550000.dwmmc2/mmc_host/*                         auto        vfat    defaults    voldmanaged=sdcard:auto,encryptable=userdata
 /devices/platform/13200000.usb/13200000.dwc3/xhci-hcd.2.auto/usb*    auto        auto    defaults    voldmanaged=usb:auto
