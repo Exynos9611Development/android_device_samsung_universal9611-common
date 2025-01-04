@@ -74,12 +74,18 @@ function blob_fixup() {
             "${PATCHELF}" --add-needed libssl-tm.so "${2}"
             "${PATCHELF}" --add-needed libshim_crypto.so "${2}"
             ;;
-        vendor/lib64/libsec-ril.so|vendor/lib64/libsec-ril-dsds.so)
-            xxd -p -c0 "${2}" | sed "s/600e40f9820c805224008052e10315aae30314aa/600e40f9820c805224008052e10315aa030080d2/g" | xxd -r -p > "${2}".patched
+        vendor/lib64/libsec-ril.so)
+            xxd -p -c0 "${2}" | sed "s/800e40f9e10316aa820c8052e30315aa/800e40f9e10316aa820c8052080080d2/g" | xxd -r -p > "${2}".patched
             mv "${2}".patched "${2}"
             ;;
         vendor/lib/libwvhidl.so)
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-3.9.1.so" "libprotobuf-cpp-full-3.9.1.so" "${2}"
+            ;;
+        vendor/bin/vaultkeeperd|vendor/lib64/libvkservice.so)
+            sed -iw 's/ro\.factory\.factory_binary/ro.vendor.factory_binary\x00/g' "${2}"
+            ;;
+        vendor/bin/vaultkeeperd)
+            "${PATCHELF}" --add-needed libdsms_vendor.so "${2}"
             ;;
     esac
 }

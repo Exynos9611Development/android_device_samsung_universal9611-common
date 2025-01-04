@@ -4,3 +4,6 @@ allow rild imei_efs_file:file w_file_perms;
 allow rild imei_efs_file:file setattr;
 
 get_prop(rild, exported_default_prop)
+
+allow rild cass:file r_file_perms;
+allow rild cass:dir r_dir_perms;
