@@ -88,7 +88,6 @@ vendor/lib64/libuuid.so
 vendor/etc/init/wifi.rc
 vendor/etc/wifi/hydra_config.sdb
 vendor/etc/wifi/indoorchannel.info
-vendor/etc/wifi/mx
 vendor/etc/wifi/mx140.bin
 vendor/etc/wifi/mx140_bt.hcf
 vendor/etc/wifi/mx140_t.bin
