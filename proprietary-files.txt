@@ -122,3 +122,6 @@ vendor/etc/nfc/sec_s3nrn82_rfreg.bin
 
 # NFC
 vendor/etc/init/init.nfc.samsung.rc
+
+## Vaultkeeper
+vendor/tee/00000000-0000-0000-0000-564c544b5052
