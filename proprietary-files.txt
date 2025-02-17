@@ -37,7 +37,6 @@ vendor/etc/mixer_usb_gray.xml
 vendor/etc/mixer_usb_white.xml
 
 ## RIL
-vendor/bin/cbd
 vendor/bin/cass
 vendor/etc/init/cass.rc
 vendor/etc/init/init.baseband.rc
