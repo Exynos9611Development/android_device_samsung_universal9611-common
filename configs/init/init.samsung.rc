@@ -194,6 +194,17 @@ service vendor.hwcomposer-3 /vendor/bin/hw/android.hardware.composer.hwc3-servic
     task_profiles HighPerformance
     override
 
+service vendor.gralloc-2-0 /vendor/bin/hw/android.hardware.graphics.allocator@2.0-service
+    interface android.hardware.graphics.allocator@2.0::IAllocator default
+    class hal animation
+    interface android.hardware.graphics.allocator@2.0::IAllocator default
+    user system
+    group graphics drmrpc
+    capabilities SYS_NICE
+    onrestart restart surfaceflinger
+    task_profiles ProcessCapacityHigh HighPerformance
+    override
+
 on boot
     # MSP: FactoryApp directory generation
     mkdir /efs/FactoryApp 0775 system system
