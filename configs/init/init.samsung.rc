@@ -185,6 +185,15 @@ on post-fs-data
     mkdir /data/vendor/biometrics 0770 system system
     mkdir /data/vendor/fpSnrTest 0770 system system
 
+service vendor.hwcomposer-3 /vendor/bin/hw/android.hardware.composer.hwc3-service.slsi
+    class hal animation
+    user system
+    group graphics drmrpc
+    capabilities SYS_NICE
+    onrestart restart surfaceflinger
+    task_profiles HighPerformance
+    override
+
 on boot
     # MSP: FactoryApp directory generation
     mkdir /efs/FactoryApp 0775 system system
