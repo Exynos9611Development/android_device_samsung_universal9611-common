@@ -115,6 +115,10 @@ on post-fs-data
 #   chown vendor_spay system /dev/mst_ctrl
 #   chmod 0660 /dev/mst_ctrl
 
+# Dalvik
+    setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,6
+    setprop dalvik.vm.dex2oat-threads 6
+
 # Create carrier folder for HiddenMenu
 on post-fs
      mkdir /efs/carrier 0755 radio system
