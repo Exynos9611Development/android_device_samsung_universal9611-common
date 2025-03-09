@@ -97,7 +97,7 @@ BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_KERNEL_NO_GCC := true
 
 ## Keymaster
-TARGET_KEYMASTER_VARIANT := samsung
+$(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/universal9611-common:libskeymaster4device)
 
 ## Manifest
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
