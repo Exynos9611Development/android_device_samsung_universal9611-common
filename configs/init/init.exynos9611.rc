@@ -63,6 +63,12 @@ on init
 
     # Limit discard size to 128MB in order to avoid long IO latency
     write /sys/block/sda/queue/discard_max_bytes 134217728
+    
+    # Filesystem tuning
+    write /sys/block/sda/queue/iostats 0
+    write /sys/block/sda/queue/read_ahead_kb 512
+    write /sys/block/sda/queue/nr_requests 64
+    write /sys/block/sda/queue/iosched/slice_idle 0
 
     ## SCSC BT
     chown bluetooth bluetooth /sys/module/scsc_bt/parameters/bluetooth_address
