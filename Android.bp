@@ -5,4 +5,7 @@
 //
 
 soong_namespace {
+    imports: [
+        "vendor/samsung/universal9611-common",
+    ],
 }

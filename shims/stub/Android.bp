@@ -1,5 +1,6 @@
 //
 // Copyright (C) 2023-2024 The LineageOS Project
+// Copyright (C) 2025 The LineageOS Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,26 +15,9 @@
 // limitations under the License.
 //
 
-cc_prebuilt_library_shared {
-    name: "libcrypto-tm",
-    target: {
-        android_arm64: {
-            srcs: ["libcrypto-tm.so"],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    vendor: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libssl-tm",
-    target: {
-        android_arm64: {
-            srcs: ["libssl-tm.so"],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
+cc_library_shared {
+    name: "libsecnativefeature",
+    srcs: ["empty.cpp"],
+    installable: false,
     vendor: true,
 }
