@@ -14,9 +14,17 @@ genfscon sysfs /devices/platform/148e0000.dsim/backlight/panel/max_brightness   
 genfscon sysfs /devices/platform/148e0000.dsim/lcd/panel                                                       u:object_r:sysfs_lcd_writable:s0
 genfscon sysfs /devices/platform/13200000.usb/13200000.dwc3/udc/13200000.dwc3/current_speed                    u:object_r:sysfs_usb:s0
 genfscon sysfs /devices/platform/13870000.i2c/i2c-4/4-0048/input/input4/enabled                                u:object_r:sysfs_touchscreen_writable:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-1/1-003d/s2mu106-muic/power_supply/muic-manager/type         u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/13830000.i2c/i2c-0/0-003b/power_supply/s2mu106-fuelgauge/type                 u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-1/1-003d/s2mu106-powermeter/power_supply/s2mu106_pmeter/type u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/13830000.i2c/i2c-0/0-003c/power_supply/s2mu106-usbpd/type                     u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-1/1-003d/s2mu106-charger/power_supply/s2mu106-charger/type   u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-1/1-003d/s2mu106-charger/power_supply/otg/type               u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/13840000.i2c/i2c-1/1-0063/power_supply/sm5440-charger/type                    u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-1/1-0049/sm5713-fuelgauge/power_supply/sm5713-fuelgauge/type u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-1/1-0049/sm5713-charger/power_supply/sm5713-charger/type     u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/13840000.i2c/i2c-1/1-0049/sm5713-charger/power_supply/otg/type                u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/sec-direct-charger/power_supply/sec-direct-charger/type                       u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/148b0000.decon_f/psr_info                                                     u:object_r:sysfs_decon:s0
 genfscon sysfs /devices/platform/148b0000.decon_f/vsync                                                        u:object_r:sysfs_decon_writable:s0
 genfscon sysfs /devices/platform/148c0000.decon_t/vsync                                                        u:object_r:sysfs_decon_writable:s0
