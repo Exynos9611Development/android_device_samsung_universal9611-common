@@ -11,4 +11,4 @@ ro.hwui.render_ahead=3
 fs_mgr.overlayfs.prefer_cache_backing_storage=true
 
 ## Multi-Gen LRU
-persist.device_config.mglru_native.lru_gen_config=core
+persist.device_config.mglru_native.lru_gen_config=core_and_mm_walk
