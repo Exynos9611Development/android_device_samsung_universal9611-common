@@ -83,9 +83,6 @@ BOARD_DTB_CFG := $(COMMON_PATH)/configs/kernel/exynos9611.cfg
 $(call soong_config_set,samsungCameraVars,usage_64bit,true)
 $(call soong_config_set,samsungCameraVars,needs_sec_reserved_field,true)
 
-# libinit
-TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):init_universal9611
-
 ## Graphics
 TARGET_USES_VULKAN := true
 
