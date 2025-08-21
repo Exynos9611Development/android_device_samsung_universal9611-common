@@ -35,9 +35,6 @@ debug.hwui.target_cpu_time_percent=30
 ## Dalvik
 dalvik.vm.dex2oat64.enabled=true
 
-## FRP
-ro.frp.pst=/dev/block/persistent
-
 ## Graphics
 debug.sf.auto_latch_unsignaled=0
 debug.sf.disable_client_composition_cache=1
