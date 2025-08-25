@@ -92,6 +92,10 @@ PRODUCT_PACKAGES += \
     android.hardware.composer.hwc3-service.slsi \
     gralloc.universal9611
 
+# Doze
+PRODUCT_PACKAGES += \
+    SamsungDoze
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
