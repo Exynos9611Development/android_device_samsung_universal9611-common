@@ -31,6 +31,7 @@ bluetooth.profile.sap.server.enabled=true
 ## HWUI
 debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
+ro.hwui.render_ahead=3
 
 ## Dalvik
 dalvik.vm.dex2oat64.enabled=true
