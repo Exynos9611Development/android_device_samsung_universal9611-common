@@ -116,7 +116,6 @@ vendor/etc/init/vendor.samsung.hardware.gnss@2.0-service.rc
 vendor/etc/gnss/ca.pem
 vendor/etc/gnss/gps.cfg
 vendor/etc/gnss/gps.debug.cfg
-vendor/lib/libwrappergps.so
 vendor/lib64/hw/android.hardware.gnss@2.1-impl.so;FIX_SONAME
 vendor/lib64/hw/vendor.samsung.hardware.gnss@2.0-impl.so;FIX_SONAME
 vendor/lib64/libwrappergps.so
