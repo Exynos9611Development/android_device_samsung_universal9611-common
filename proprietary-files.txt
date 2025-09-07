@@ -74,9 +74,6 @@ vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/libOpenCL.so;SYMLINK=vendo
 vendor/bin/tzdaemon
 vendor/bin/tzts_daemon
 vendor/etc/init/teegris.rc
-vendor/lib/hw/gatekeeper.exynos9611.so
-vendor/lib/libteecl.so
-vendor/lib/libuuid.so;MODULE_SUFFIX=_vendor
 vendor/lib64/hw/gatekeeper.exynos9611.so
 vendor/lib64/libiwt.so
 vendor/lib64/libkeymaster_helper.so
