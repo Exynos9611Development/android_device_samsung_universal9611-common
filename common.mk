@@ -36,11 +36,11 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl:32 \
     android.hardware.audio@7.1-impl:32 \
     android.hardware.audio.service \
-    android.hardware.bluetooth.audio-impl \
-    audio.bluetooth.default \
-    audio.primary.universal9611 \
-    audio.r_submix.default \
-    audio.usb.default
+    android.hardware.bluetooth.audio-impl:32 \
+    audio.bluetooth.default:32 \
+    audio.primary.universal9611:32 \
+    audio.r_submix.default:32 \
+    audio.usb.default:32
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration_7_0.xml \
