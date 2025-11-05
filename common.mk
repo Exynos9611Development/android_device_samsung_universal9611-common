@@ -38,7 +38,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio-impl:32 \
     audio.bluetooth.default:32 \
-    audio.primary.universal9611:32 \
     audio.r_submix.default:32 \
     audio.usb.default:32
 
@@ -322,7 +321,6 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/samsung \
     hardware/samsung_slsi-linaro/exynos/cpboot_v3 \
-    hardware/samsung_slsi-linaro/exynos/libaudio/audiohal \
     hardware/samsung_slsi-linaro/exynos/gralloc/gralloc3 \
     hardware/samsung_slsi/libbt
 
