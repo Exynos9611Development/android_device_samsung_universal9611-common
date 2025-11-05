@@ -32,6 +32,7 @@ def lib_fixup_device_dep(lib: str, partition: str, *args, **kwargs):
 
 lib_fixups: lib_fixups_user_type = {
     libs_proto_3_9_1: lib_fixup_vendorcompat,
+    'libaudioroute': lib_fixup_vendor_suffix,
     'libsecnativefeature': lib_fixup_device_dep,
     'libuuid': lib_fixup_vendor_suffix,
 } # fmt: skip
@@ -54,6 +55,11 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libsec-ril.so': blob_fixup()
         .sig_replace('80 0E 40 F9 E1 03 16 AA 82 0C 80 52 E3 03 15 AA',
             '80 0E 40 F9 E1 03 16 AA 82 0C 80 52 08 00 80 D2'),
+    'vendor/lib/hw/audio.primary.exynos9611.so': blob_fixup()
+        .add_needed('libshim_audioparams.so')
+        .binary_regex_replace(b'str_parms_get_str', b'str_parms_get_mod'),
+    'vendor/lib/libaudioproxy.so': blob_fixup()
+        .add_needed('libshim_mixerparams.so'),
     'vendor/lib64/libvkservice.so': blob_fixup()
         .binary_regex_replace(b'ro.factory.factory_binary', b'ro.vendor.factory_binary\x00'),
     (
@@ -62,6 +68,7 @@ blob_fixups: blob_fixups_user_type = {
     ) : blob_fixup()
         .replace_needed('libcrypto.so', 'libcrypto-tm.so')
         .add_needed('libshim_crypto.so'),
+    
 }  # fmt: skip
 
 module = ExtractUtilsModule(
