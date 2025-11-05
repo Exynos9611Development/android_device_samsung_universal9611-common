@@ -1,7 +1,6 @@
 # Proprietary files - from Samsung package version A515FXXU5GVK6, unless pinned
 
 ## Audio
-vendor/bin/main_abox
 vendor/lib/hw/audio.primary.exynos9611.so
 vendor/lib/libalsautils_sec.so
 vendor/lib/libaudio-ril.so
@@ -19,8 +18,7 @@ vendor/lib/libspatializerparamstorage.so
 vendor/lib/lib_SamsungRec_07010.so
 vendor/lib/lib_soundaliveresampler.so
 vendor/lib/lib_SoundAlive_SRC384_ver320.so
-vendor/lib/vndk/libaudioroute.so:vendor/lib/libaudioroute.so
-vendor/lib/vndk/libtinyalsa.so:vendor/lib/libtinyalsa.so
+vendor/lib/vndk/libaudioroute.so:vendor/lib/libaudioroute.so;MODULE_SUFFIX=_vendor
 vendor/lib/soundfx/libaudioeffectoffload.so
 
 ## Firmware
@@ -58,9 +56,9 @@ vendor/etc/plmn_delta_attaio.bin
 vendor/etc/plmn_delta_hktw.bin
 vendor/etc/plmn_delta_usagsm.bin
 vendor/etc/plmn_se13.bin
+vendor/lib/libsecril-client.so
 vendor/lib64/libengmode_client.so
 vendor/lib64/libfloatingfeature.so
-vendor/lib64/libsecnativefeature.so
 vendor/lib64/libvkmanager_vendor.so
 
 ## RIL - from a14 - A145FXXS5BXA1
