@@ -204,7 +204,7 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/nfc/libnfc-nci_slsi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf
 
 PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.2-service.samsung
+    android.hardware.nfc-service.sec
 endif
 
 PRODUCT_PACKAGES += \

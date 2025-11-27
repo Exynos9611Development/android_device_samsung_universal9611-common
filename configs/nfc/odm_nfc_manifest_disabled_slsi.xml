@@ -1,6 +1,5 @@
 <manifest version="4.0" type="device">
-    <hal format="hidl" override="true">
+    <hal format="aidl" override="true">
         <name>android.hardware.nfc</name>
-        <transport>hwbinder</transport>
     </hal>
 </manifest>
