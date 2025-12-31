@@ -195,9 +195,6 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/nfc/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_VENDOR)/etc/nfc/libnfc-nxp_RF.conf \
     $(COMMON_PATH)/configs/nfc/libnfc-nci_nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/nfc.conf \
     $(COMMON_PATH)/configs/nfc/libnfc-nci_nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf
-
-PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.2-service
 else ifeq ($(TARGET_USES_SLSI_NFC),true)
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/nfc/libnfc-sec-vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-vendor.conf \
