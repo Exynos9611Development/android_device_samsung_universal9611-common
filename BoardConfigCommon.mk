@@ -140,7 +140,7 @@ BOARD_USES_FULL_RECOVERY_IMAGE := true
 ## RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 $(call soong_config_set,cbd,protocol,sipc)
-$(call soong_config_set,cbd,use_legacy_sipc_ioctl,true)
+$(call soong_config_set_bool,cbd,use_legacy_sipc_ioctl,true)
 
 ## Security
 VENDOR_SECURITY_PATCH := 2022-10-01
