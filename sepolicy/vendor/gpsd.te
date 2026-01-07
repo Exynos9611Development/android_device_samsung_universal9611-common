@@ -17,4 +17,3 @@ allow gpsd system_data_file:dir search;
 
 binder_call(gpsd, servicemanager)
 allow gpsd hal_system_suspend_service:service_manager find;
-binder_call(gpsd, hal_system_suspend_service)
