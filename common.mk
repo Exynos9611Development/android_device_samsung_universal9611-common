@@ -189,21 +189,6 @@ PRODUCT_PACKAGES += \
     libOMX.Exynos.WMV.Decoder
 
 # NFC
-ifeq ($(TARGET_USES_NXP_NFC),true)
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
-    $(COMMON_PATH)/configs/nfc/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_VENDOR)/etc/nfc/libnfc-nxp_RF.conf \
-    $(COMMON_PATH)/configs/nfc/libnfc-nci_nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/nfc.conf \
-    $(COMMON_PATH)/configs/nfc/libnfc-nci_nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf
-else ifeq ($(TARGET_USES_SLSI_NFC),true)
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/nfc/libnfc-sec-vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-vendor.conf \
-    $(COMMON_PATH)/configs/nfc/libnfc-nci_slsi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf
-
-PRODUCT_PACKAGES += \
-    android.hardware.nfc-service.sec
-endif
-
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     Tag

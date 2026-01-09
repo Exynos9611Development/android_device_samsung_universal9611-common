@@ -136,13 +136,6 @@ vendor/lib64/hw/vendor.samsung.hardware.gnss@2.0-impl.so;FIX_SONAME
 vendor/lib64/libwrappergps.so
 vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
 
-# SLSI NFC firmware - from M315FXXU3CVH1
-vendor/firmware/nfc/sec_s3nrn82_firmware.bin
-vendor/etc/nfc/sec_s3nrn82_rfreg.bin
-
-# NFC
-vendor/etc/init/init.nfc.samsung.rc
-
 ## Vaultkeeper
 vendor/bin/vaultkeeperd
 vendor/etc/init/vaultkeeper_common.rc
