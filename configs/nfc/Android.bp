@@ -1,6 +1,0 @@
-prebuilt_etc {
-   name: "init.nfc_sku.rc",
-   src: "init.nfc_sku.rc",
-   sub_dir: "init",
-   vendor: true,
-}
