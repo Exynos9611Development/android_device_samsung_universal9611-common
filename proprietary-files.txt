@@ -1,4 +1,4 @@
-# Proprietary files - from Samsung package version A515FXXU5GVK6, unless pinned
+# Proprietary files - from Samsung package version A515FXXU8HWK1, unless pinned
 
 ## Audio
 vendor/lib/hw/audio.primary.exynos9611.so

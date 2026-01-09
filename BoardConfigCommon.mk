@@ -127,7 +127,7 @@ $(call soong_config_set,cbd,protocol,sipc)
 $(call soong_config_set_bool,cbd,use_legacy_sipc_ioctl,true)
 
 ## Security
-VENDOR_SECURITY_PATCH := 2022-10-01
+VENDOR_SECURITY_PATCH := 2023-08-01
 
 ## SELinux
 BOARD_SEPOLICY_TEE_FLAVOR := teegris
