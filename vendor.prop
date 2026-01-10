@@ -1,9 +1,6 @@
 ## Adoptable Storage
 ro.crypto.volume.options=aes-256-xts:aes-256-cts:v2
 
-## APK Verity
-ro.apk_verity.mode=2
-
 ## Audio
 audio.offload.min.duration.secs=30
 aaudio.mmap_policy=2
@@ -31,7 +28,6 @@ bluetooth.profile.sap.server.enabled=true
 ## HWUI
 debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
-ro.hwui.render_ahead=3
 
 ## Dalvik
 dalvik.vm.dex2oat64.enabled=true
@@ -59,9 +55,6 @@ ro.vendor.ddk.set.afbc=1
 
 ## Power HAL
 vendor.powerhal.disp.idle_support=false
-
-# Filesystem
-fs_mgr.overlayfs.prefer_cache_backing_storage=true
 
 ## Metadata Encryption
 ro.crypto.dm_default_key.options_format.version=2
