@@ -76,8 +76,8 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_DTB_CFG := $(COMMON_PATH)/configs/kernel/exynos9611.cfg
 
 ## Camera
-$(call soong_config_set,samsungCameraVars,usage_64bit,true)
-$(call soong_config_set,samsungCameraVars,needs_sec_reserved_field,true)
+$(call soong_config_set_bool,samsungCameraVars,usage_64bit,true)
+$(call soong_config_set_bool,samsungCameraVars,needs_sec_reserved_field,true)
 
 ## Graphics
 TARGET_USES_VULKAN := true
@@ -136,7 +136,7 @@ include device/samsung_slsi/sepolicy/sepolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 
 # Vibrator
-$(call soong_config_set,samsungVibratorVars,duration_amplitude,true)
+$(call soong_config_set_bool,samsungVibratorVars,duration_amplitude,true)
 
 ## USB
 $(call soong_config_set,samsungUsbGadgetVars,gadget_name,13200000.dwc3)
