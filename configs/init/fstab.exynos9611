@@ -23,4 +23,4 @@ odm		/odm		erofs		ro		wait,logical,first_stage_mount,readahead_size_kb=128
 /devices/platform/13550000.dwmmc2/mmc_host/*                         auto        vfat    defaults    voldmanaged=sdcard:auto,encryptable=userdata
 /devices/platform/13200000.usb/13200000.dwc3/xhci-hcd.2.auto/usb*    auto        auto    defaults    voldmanaged=usb:auto
 
-/dev/block/zram0	none		swap	defaults	zramsize=50%
+/dev/block/zram0	none		swap	defaults	zramsize=50%,zram_backingdev_size=512M
