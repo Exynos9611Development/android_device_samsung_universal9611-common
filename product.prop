@@ -4,9 +4,6 @@ persist.sys.fuse.passthrough.enable=true
 ## APK Verity
 ro.apk_verity.mode=2
 
-## HWUI
-ro.hwui.render_ahead=3
-
 ## Filesystem
 fs_mgr.overlayfs.prefer_cache_backing_storage=true
 
