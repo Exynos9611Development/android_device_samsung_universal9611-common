@@ -18,7 +18,7 @@ vendor/lib/libspatializerparamstorage.so
 vendor/lib/lib_SamsungRec_07010.so
 vendor/lib/lib_soundaliveresampler.so
 vendor/lib/lib_SoundAlive_SRC384_ver320.so
-vendor/lib/vndk/libaudioroute.so:vendor/lib/libaudioroute_vendor.so
+vendor/lib/vndk/libaudioroute.so:vendor/lib/libaudioroute_vendor.so;FIX_SONAME
 vendor/lib/soundfx/libaudioeffectoffload.so
 
 ## Firmware
