@@ -27,12 +27,8 @@ namespace_imports = [
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
     return f'{lib}_{partition}' if partition == 'vendor' else None
 
-def lib_fixup_device_dep(lib: str, partition: str, *args, **kwargs):
-    return f'//device/samsung/universal9611-common/shims/stub:{lib}'
-
 lib_fixups: lib_fixups_user_type = {
     libs_proto_3_9_1: lib_fixup_vendorcompat,
-    'libsecnativefeature': lib_fixup_device_dep,
     'libuuid': lib_fixup_vendor_suffix,
 } # fmt: skip
 
