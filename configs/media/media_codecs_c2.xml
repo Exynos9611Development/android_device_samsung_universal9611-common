@@ -21,10 +21,10 @@
     <Decoders>
         <MediaCodec name="c2.exynos.h264.decoder" type="video/avc">
             <Alias name="OMX.Exynos.avc.dec"/>
-            <Limit name="size" min="32x32" max="8192x8192" />  <!-- 1920x1088, 150fps -->
+            <Limit name="size" min="32x32" max="4096x4096" />  <!-- 1920x1088, 150fps -->
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
-            <Limit name="block-count" range="1-262144" />
+            <Limit name="block-count" range="1-65536" />
             <Limit name="blocks-per-second" min="1" max="1224000" />
             <Limit name="bitrate" range="1-80000000" />
             <!-- performance point : size[SD, HD, FHD, UHD], fps[24, 25, 30, 50, 60, 120, 200, 240] -->
@@ -36,10 +36,10 @@
             <Feature name="adaptive-playback" />
         </MediaCodec>
         <MediaCodec name="c2.exynos.h264.decoder.secure" type="video/avc">
-            <Limit name="size" min="32x32" max="8192x8192" />  <!-- 1920x1088, 150fps -->
+            <Limit name="size" min="32x32" max="4096x4096" />  <!-- 1920x1088, 150fps -->
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
-            <Limit name="block-count" range="1-262144" />
+            <Limit name="block-count" range="1-65536" />
             <Limit name="blocks-per-second" min="1" max="1224000" />
             <Limit name="bitrate" range="1-80000000" />
             <!-- performance point : size[SD, HD, FHD, UHD], fps[24, 25, 30, 50, 60, 120, 200, 240] -->
@@ -53,10 +53,10 @@
         </MediaCodec>
         <MediaCodec name="c2.exynos.hevc.decoder" type="video/hevc" >
             <Alias name="OMX.Exynos.hevc.dec"/>
-            <Limit name="size" min="64x64" max="8192x8192" />  <!-- 1920x1088, 150fps -->
+            <Limit name="size" min="64x64" max="4096x4096" />  <!-- 1920x1088, 150fps -->
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
-            <Limit name="block-count" range="1-262144" />
+            <Limit name="block-count" range="1-65536" />
             <Limit name="blocks-per-second" min="1" max="1224000" />
             <Limit name="bitrate" range="1-80000000" />
             <!-- performance point : size[SD, HD, FHD, UHD], fps[24, 25, 30, 50, 60, 120, 200, 240] -->
@@ -68,10 +68,10 @@
             <Feature name="adaptive-playback" />
         </MediaCodec>
         <MediaCodec name="c2.exynos.hevc.decoder.secure" type="video/hevc" >
-            <Limit name="size" min="64x64" max="8192x8192" />  <!-- 1920x1088, 150fps -->
+            <Limit name="size" min="64x64" max="4096x4096" />  <!-- 1920x1088, 150fps -->
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
-            <Limit name="block-count" range="1-262144" />
+            <Limit name="block-count" range="1-65536" />
             <Limit name="blocks-per-second" min="1" max="1224000" />
             <Limit name="bitrate" range="1-80000000" />
             <!-- performance point : size[SD, HD, FHD, UHD], fps[24, 25, 30, 50, 60, 120, 200, 240] -->
@@ -83,8 +83,8 @@
             <Feature name="adaptive-playback" />
             <Feature name="secure-playback" required="true" />
         </MediaCodec>
-        <MediaCodec name="c2.exynos.vp9.decoder" type="video/x-vnd.on2.vp9" >
-            <Alias name="OMX.Exynos.vp9.dec"/>
+        <MediaCodec name="c2.exynos.vp8.decoder" type="video/x-vnd.on2.vp8" >
+            <Alias name="OMX.Exynos.vp8.dec"/>
             <Limit name="size" min="32x32" max="3840x2160" />  <!-- 1920x1088, 60fps -->
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
@@ -102,11 +102,11 @@
 
     <Encoders>
         <MediaCodec name="c2.exynos.h264.encoder" type="video/avc">
-            <Alias name="OMX.Exynos.AVC.Encoder"/>
-            <Limit name="size" min="32x32" max="8192x8192" />  <!-- 1920x1088, 150fps -->
+            <Alias name="OMX.Exynos.AVC.Encoder" />
+            <Limit name="size" min="32x32" max="4096x4096" />  <!-- 1920x1088, 150fps -->
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
-            <Limit name="block-count" range="1-262144" />
+            <Limit name="block-count" range="1-65536" />
             <Limit name="blocks-per-second" min="1" max="1224000" />
             <Limit name="bitrate" range="1-80000000" />
             <!-- performance point : size[SD, HD, FHD, UHD], fps[24, 25, 30, 50, 60, 120, 200, 240] -->
@@ -118,10 +118,10 @@
             <Feature name="video-minimum-quality" />
         </MediaCodec>
         <MediaCodec name="c2.exynos.h264.encoder.secure" type="wfd/avc">
-            <Limit name="size" min="32x32" max="8192x8192" />  <!-- 1920x1088, 150fps -->
+            <Limit name="size" min="32x32" max="4096x4096" />  <!-- 1920x1088, 150fps -->
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
-            <Limit name="block-count" range="1-262144" />
+            <Limit name="block-count" range="1-65536" />
             <Limit name="blocks-per-second" min="1" max="1224000" />
             <Limit name="bitrate" range="1-80000000" />
             <!-- performance point : size[SD, HD, FHD, UHD], fps[24, 25, 30, 50, 60, 120, 200, 240] -->
@@ -131,14 +131,14 @@
             <Limit name="concurrent-instances" max="2" />
             <Attribute name="software-codec" />
             <Feature name="can-swap-width-height" value="1" />
-            <Feature name="video-minimum-quality" />
+            <!-- <Feature name="video-minimum-quality" /> -->
         </MediaCodec>
         <MediaCodec name="c2.exynos.hevc.encoder" type="video/hevc" >
-            <Alias name="OMX.Exynos.HEVC.Encoder"/>
-            <Limit name="size" min="64x64" max="8192x8192" />  <!-- 1920x1088, 150fps -->
+            <Alias name="OMX.Exynos.HEVC.Encoder" />
+            <Limit name="size" min="64x64" max="4096x4096" />  <!-- 1920x1088, 150fps -->
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="32x32" />
-            <Limit name="block-count" range="1-65536" />
+            <Limit name="block-count" range="1-16384" />
             <Limit name="blocks-per-second" min="1" max="306000" />
             <Limit name="bitrate" range="1-80000000" />
             <!-- performance point : size[SD, HD, FHD, UHD], fps[24, 25, 30, 50, 60, 120, 200, 240] -->
@@ -150,10 +150,10 @@
             <Feature name="video-minimum-quality" />
         </MediaCodec>
         <MediaCodec name="c2.exynos.hevc.encoder.secure" type="wfd/hevc">
-            <Limit name="size" min="64x64" max="8192x8192" />  <!-- 1920x1088, 150fps -->
+            <Limit name="size" min="64x64" max="4096x4096" />  <!-- 1920x1088, 150fps -->
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="32x32" />
-            <Limit name="block-count" range="1-65536" />
+            <Limit name="block-count" range="1-16384" />
             <Limit name="blocks-per-second" min="1" max="306000" />
             <Limit name="bitrate" range="1-80000000" />
             <!-- performance point : size[SD, HD, FHD, UHD], fps[24, 25, 30, 50, 60, 120, 200, 240] -->
@@ -163,10 +163,10 @@
             <Limit name="concurrent-instances" max="2" />
             <Attribute name="software-codec" />
             <Feature name="can-swap-width-height" value="1" />
-            <Feature name="video-minimum-quality" />
+            <!-- <Feature name="video-minimum-quality" /> -->
         </MediaCodec>
-        <MediaCodec name="c2.exynos.vp9.encoder" type="video/x-vnd.on2.vp9" >
-            <Alias name="OMX.Exynos.VP9.Encoder"/>
+        <MediaCodec name="c2.exynos.vp8.encoder" type="video/x-vnd.on2.vp8" >
+            <Alias name="OMX.Exynos.VP8.Encoder"/>
             <Limit name="size" min="32x32" max="3840x2160" />  <!-- 1920x1088, 60fps -->
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
@@ -179,6 +179,17 @@
             <Limit name="concurrent-instances" max="16" />
             <Feature name="can-swap-width-height" value="1" />
             <Feature name="video-minimum-quality" />
+        </MediaCodec>
+        <MediaCodec name="c2.android.av1.encoder" type="video/av01" enabled="false" minsdk="34" update="true">
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="size" min="2x2" max="720x720" />
+            <Limit name="block-count" range="1-1350" /> <!-- max 720x480 -->
+            <Limit name="bitrate" range="1-5000000" />
+            <Limit name="quality" range="0-100"  default="80" />
+            <Limit name="complexity" range="0-5"  default="0" />
+            <Feature name="bitrate-modes" value="VBR,CBR,CQ" />
+            <Attribute name="software-codec" />
         </MediaCodec>
     </Encoders>
 </MediaCodecs>

@@ -78,19 +78,18 @@ PRODUCT_PACKAGES += \
     libExynosC2H264Enc \
     libExynosC2HevcDec \
     libExynosC2HevcEnc \
-    libExynosC2Vp9Dec \
-    libExynosC2Vp9Enc
+    libExynosC2Vp8Dec \
+    libExynosC2Vp8Enc
 
 PRODUCT_PACKAGES += \
     codec2.vendor.base.policy \
     codec2.vendor.ext.policy
 
-$(call soong_config_set,openmax,USE_CSC_FILTER,true)
-$(call soong_config_set,openmax,legacy_mfc,true)
-
 PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     $(COMMON_PATH)/configs/media/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
     $(COMMON_PATH)/configs/media/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
+    $(COMMON_PATH)/configs/media/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
     $(COMMON_PATH)/configs/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 
 # ConfigStore
