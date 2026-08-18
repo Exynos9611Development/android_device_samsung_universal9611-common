@@ -1,0 +1,86 @@
+{
+  "Profiles": [
+    {
+      "Name": "HighEnergySaving",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params": { "Controller": "cpu", "Path": "background" }
+        },
+        {
+          "Name": "SetAttribute",
+          "Params": { "Name": "UClampMax", "Value": "30" }
+        }
+      ]
+    },
+    {
+      "Name": "ProcessCapacityLow",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params": { "Controller": "cpuset", "Path": "background" }
+        },
+        {
+          "Name": "SetAttribute",
+          "Params": { "Name": "UClampMax", "Value": "30" }
+        }
+      ]
+    },
+    {
+      "Name": "MaxPerformance",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params": { "Controller": "cpu", "Path": "top-app" }
+        },
+        {
+          "Name": "SetAttribute",
+          "Params": { "Name": "UClampMin", "Value": "50" }
+        }
+      ]
+    },
+    {
+      "Name": "HighPerformance",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params": { "Controller": "cpu", "Path": "foreground" }
+        },
+        {
+          "Name": "SetAttribute",
+          "Params": { "Name": "UClampMin", "Value": "10" }
+        },
+        {
+          "Name": "SetAttribute",
+          "Params": { "Name": "UclampLatencySensitive", "Value": "1" }
+        }
+      ]
+    },
+    {
+      "Name": "RealTimeInputScheduling",
+      "Actions": [
+        {
+          "Name": "SetSchedulerPolicy",
+          "Params": { "Policy": "SCHED_FIFO", "Priority": "2" }
+        },
+        {
+          "Name": "SetAttribute",
+          "Params": { "Name": "UClampMin", "Value": "50" }
+        }
+      ]
+    },
+    {
+      "Name": "CameraServicePerformance",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params": { "Controller": "cpu", "Path": "camera-daemon" }
+        },
+        {
+          "Name": "SetAttribute",
+          "Params": { "Name": "UClampMin", "Value": "50" }
+        }
+      ]
+    }
+  ]
+}

@@ -55,15 +55,6 @@
             "ResetOnInit": true
         },
         {
-            "Name": "TASchedtuneBoost",
-            "Path": "/dev/stune/top-app/schedtune.boost",
-            "Values": [
-                "30",
-                "5"
-            ],
-            "ResetOnInit": true
-        },
-        {
             "Name": "CDCpuset",
             "Path": "/dev/cpuset/background/cpus",
             "Values": [
@@ -120,12 +111,6 @@
             "Node": "GPUMinFreq",
             "Duration": 0,
             "Value": "455000"
-        },
-        {
-            "PowerHint": "INTERACTION",
-            "Node": "TASchedtuneBoost",
-            "Duration": 0,
-            "Value": "30"
         },
         {
             "PowerHint": "INTERACTION",
